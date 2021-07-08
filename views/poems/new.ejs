@@ -1,0 +1,43 @@
+<% layout('layouts/boilerplate')%>
+
+<!-- <form action="/poems" method="POST">
+    <div>
+        <label for="title">Title</label>
+        <input type="text" id="title" name="poem[title]">
+    </div>
+    <div>
+        <label for="ballad">Ballad</label>
+        <textarea id="ballad" name="poem[ballad]"></textarea>
+    </div>
+    <button>Add Poem</button>
+</form>
+<a href="/poems">All Poems</a> -->
+
+
+<div class="row">
+    <h1 class="text-center">New Poem</h1>
+    <div class="col-6 offset-3">
+        <form action="/poems" method="POST" novalidate class="validated-form">
+            <div class="mb-3">
+                <label class="form-label" for="title">Title</label>
+                <input class="form-control" type="text" id="title" name="poem[title]" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" for="ballad">Ballad</label>
+                <textarea class="form-control" rows="5" type="text" id="ballad" name="poem[ballad]" required></textarea>
+
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div class="mb-3">
+                <button class="btn btn-success" onclick=wrap()>Add Poem</button>
+            </div>
+        </form>
+        <a href="/poems">All Poems</a>
+    </div>
+</div>
